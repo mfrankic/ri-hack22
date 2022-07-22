@@ -1,0 +1,55 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["prettier", "react-hooks"],
+  "parser": "babel-eslint",
+  "root": true,
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["react", "@types/react/index.d.ts"]
+        ]
+      }
+    }
+  },
+  "env": {
+    "commonjs": true,
+    "node": true,
+    "es6": true,
+    "jest": true,
+    "browser": true
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        "no-underscore-dangle": "off"
+      }
+    }
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "import/prefer-default-export": 0,
+    "jsx-a11y/no-static-element-interactions": "off",
+    "no-multiple-empty-lines": [
+      2,
+      {
+        "max": 1,
+        "maxEOF": 1
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react-hooks/exhaustive-deps": 1,
+    "react-hooks/rules-of-hooks": 2,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-array-index-key": 0,
+    "jsx-a11y/media-has-caption": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "@ri-hack22/frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "0.19.2",
+    "bootstrap": "^5.2.0",
+    "classnames": "2.2.6",
+    "flag-icons": "^6.1.1",
+    "history": "4.10.1",
+    "lodash": "4.17.20",
+    "prop-types": "15.7.2",
+    "query-string": "6.13.1",
+    "react": "16.13.1",
+    "react-bootstrap": "^2.4.0",
+    "react-device-detect": "1.13.1",
+    "react-dom": "16.13.1",
+    "react-gtm-module": "2.0.11",
+    "react-hook-form": "5.7.2",
+    "react-redux": "7.2.0",
+    "react-router": "5.2.0",
+    "react-router-dom": "5.2.0",
+    "react-router-redux": "4.0.8",
+    "react-scripts": "3.4.3",
+    "react-tooltip": "^4.2.21",
+    "recharts": "1.8.5",
+    "redux": "4.0.5",
+    "redux-thunk": "2.3.0",
+    "reselect": "4.0.0",
+    "yup": "0.29.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@testing-library/jest-dom": "4.2.4",
+    "@testing-library/react": "9.3.2",
+    "@testing-library/user-event": "7.1.2",
+    "node-sass": "4.14.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:https": "HTTPS=true react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prettier": "prettier --write ./src/**/*.js --ignore-path \"../../.prettierignore\" --config \"../../prettier.config.js\"",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.js": "eslint"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

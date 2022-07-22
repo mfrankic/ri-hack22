@@ -1,0 +1,12 @@
+{
+  "extends": ["../../.eslintrc"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["."],
+        "extensions": [".js", ".jsx"],
+        "moduleDirectory": ["node_modules", "."]
+      }
+    }
+  }
+}

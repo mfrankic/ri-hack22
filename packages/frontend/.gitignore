@@ -1,0 +1,10 @@
+/node_modules
+/build
+
+/.idea
+/.vscode
+
+.env
+src/template.json
+
+/cypress/config.json
