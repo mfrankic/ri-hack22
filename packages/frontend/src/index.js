@@ -2,8 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Route, Router, Switch } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Redirect, Router, Switch } from 'react-router';
 import { createBrowserHistory } from 'history';
 import { syncHistoryWithStore } from 'react-router-redux';
 
@@ -12,9 +11,17 @@ import { paths } from './constants';
 
 import { configureStore } from './store/utils';
 
-import { AddTutorial } from './components/pages';
+import {
+  Benefits,
+  Events,
+  Login,
+  Reports,
+  Register,
+  RouteManagement,
+  Volunteers,
+} from './components/pages';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { AuthProvider, SafeRoute, Validators } from './components/common';
 
 const history = new Proxy(createBrowserHistory(), {
   get(target, prop) {
@@ -36,34 +43,32 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router history={enhancedHistory}>
-        <nav className="navbar navbar-expand navbar-dark bg-dark">
-          <Link to={paths.TUTORIALS} className="navbar-brand">
-            bezKoder
-          </Link>
-          <div className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <Link to={paths.TUTORIALS} className="nav-link">
-                Tutorials
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={paths.ADD_TUTORIAL} className="nav-link">
-                Add
-              </Link>
-            </li>
-          </div>
-        </nav>
-        <div className="container mt-3">
-          <Switch>
-            {/* <Route
-              exact
-              path={[paths.BASE, paths.TUTORIALS]}
-              component={TutorialsList}
-            /> */}
-            <Route exact path={paths.ADD_TUTORIAL} component={AddTutorial} />
-            {/* <Route path={paths.TUTORIAL} component={Tutorial} /> */}
-          </Switch>
-        </div>
+        <AuthProvider>
+          <Validators.UnauthorizedValidator>
+            <Switch>
+              <SafeRoute exact path={paths.LOGIN} component={Login} />
+              <SafeRoute exact path={paths.REGISTER} component={Register} />
+            </Switch>
+          </Validators.UnauthorizedValidator>
+          <Validators.AuthValidator>
+            <Switch>
+              <SafeRoute
+                exact
+                path={paths.BASE}
+                component={() => <Redirect to={paths.ROUTE_MANAGEMENT} />}
+              />
+              <SafeRoute
+                exact
+                path={paths.ROUTE_MANAGEMENT}
+                component={RouteManagement}
+              />
+              <SafeRoute exact path={paths.REPORTS} component={Reports} />
+              <SafeRoute exact path={paths.EVENTS} component={Events} />
+              <SafeRoute exact path={paths.VOLUNTEERS} component={Volunteers} />
+              <SafeRoute exact path={paths.BENEFITS} component={Benefits} />
+            </Switch>
+          </Validators.AuthValidator>
+        </AuthProvider>
       </Router>
     </Provider>
   </React.StrictMode>,

@@ -1,5 +1,7 @@
-import tutorials from './tutorials';
+import authentication from './authentication';
+import reports from './reports';
 
 export default {
-  tutorials,
+  authentication,
+  reports,
 };

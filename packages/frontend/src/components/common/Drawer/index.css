@@ -1,0 +1,17 @@
+.drawer-container {
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+  height: 100%;
+}
+
+.drawer-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.list-item {
+  width: 100% !important;
+}

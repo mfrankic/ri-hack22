@@ -1,0 +1,37 @@
+.overlay-loader {
+  position: absolute;
+  background: #00000085;
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    border: 5px solid rgba(243, 243, 243, 0.65);
+    border-radius: 50%;
+    border-top: 5px solid transparent;
+
+    width: 50px;
+    height: 50px;
+
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

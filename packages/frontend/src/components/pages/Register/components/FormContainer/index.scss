@@ -1,0 +1,68 @@
+.register-form {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.registration-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #fbf4ed;
+
+  .btn--primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 10px;
+    height: 60px;
+  }
+
+  & .input-container__checkbox-container .label-container {
+    font-weight: 400;
+  }
+
+  & .label-container {
+    font-size: 20px !important;
+  }
+
+  &__login-redirect {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 25px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.mobile .registration-form-container {
+  .icon-container {
+    height: 23px !important;
+    width: 23px !important;
+  }
+
+  .btn--primary {
+    font-size: 13px;
+    margin-top: 10px;
+    height: 35px;
+  }
+
+  & .label-container {
+    font-size: 10px !important;
+  }
+
+  &__login-redirect {
+    margin-top: 30px;
+    font-size: 13px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
