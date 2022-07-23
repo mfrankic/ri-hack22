@@ -1,14 +1,21 @@
 export default {
   BASE: '/',
-  ADD_TUTORIAL: '/add-tutorial',
-  TUTORIALS: '/tutorials',
-  TUTORIAL: '/tutorials/:id',
+
+  ROUTE_MANAGEMENT: '/route-management',
+  REPORTS: '/reports',
+  EVENTS: '/events',
+  VOLUNTEERS: '/volunteers',
+  BENEFITS: '/benefits',
+  LOGIN: '/login',
+  REGISTER: '/register',
 
   api: {
-    ADD_TUTORIAL: '/add-tutorial',
-    TUTORIALS: '/tutorials',
-    TUTORIAL: '/tutorials/:id',
-    TUTORIALS_BY_TITLE: '/tutorials/title/:title',
+    AUTHENTICATE_LOGIN: '/user/login',
+    AUTHENTICATE_REGISTER: '/user/register_admin',
+    AUTHENTICATE_USER: '/user/auth?auth_token=:token',
+    REPORTS: '/reports',
+    REPORT_ACCEPT: '/reports/accept',
+    REPORT_DECLINE: '/reports/decline',
   },
 
   build: (path, ...params) => {

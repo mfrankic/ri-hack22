@@ -1,0 +1,45 @@
+.login-page {
+  display: flex;
+  background-size: cover;
+
+  height: 100%;
+
+  &__title-container {
+    width: 70%;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    flex-direction: column;
+    > * {
+      margin-bottom: 20px;
+    }
+  }
+
+  .signin-with {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    padding: 5px;
+  }
+}
+
+.mobile .login-page {
+  .socials {
+    > * {
+      margin-bottom: 10px;
+    }
+  }
+  .signin-with {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 5px;
+  }
+}

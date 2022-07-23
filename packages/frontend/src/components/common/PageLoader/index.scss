@@ -1,0 +1,22 @@
+.page-loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 12;
+
+  &__animation--fade-out {
+    bottom: 0;
+    left: 0;
+    animation: fade-out 1s forwards;
+    z-index: -1;
+  }
+}
+
+@keyframes fade-out {
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

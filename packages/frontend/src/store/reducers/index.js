@@ -3,10 +3,12 @@ import { routerReducer } from 'react-router-redux';
 
 import { actions } from 'src/constants';
 
-import tutorials from './tutorials';
+import authentication from './authentication';
+import reports from './reports';
 
 const staticReducers = {
-  tutorials,
+  authentication,
+  reports,
 };
 
 const rootReducer = (asyncReducers) => {
