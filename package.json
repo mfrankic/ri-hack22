@@ -26,11 +26,6 @@
     "lint-staged": "10.5.3",
     "prettier": "2.0.5"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lerna run precommit --concurrency 1"
-    }
-  },
   "dependencies": {
     "yargs": "17.2.1"
   }

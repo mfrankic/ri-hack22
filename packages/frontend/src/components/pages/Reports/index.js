@@ -4,7 +4,6 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 
 import {
-  Button,
   Table,
   TableBody,
   TableCell,
@@ -44,12 +43,6 @@ const Reports = ({ hasLoaded, getReports, reports }) => {
                 <TableCell>{row.grid_id}</TableCell>
                 <TableCell>{row.image_path}</TableCell>
                 <TableCell>{row.created_at}</TableCell>
-                <TableCell>
-                  <Button></Button>
-                </TableCell>
-                <TableCell>
-                  <Button></Button>
-                </TableCell>
               </TableRow>
             ))}
           </TableBody>
