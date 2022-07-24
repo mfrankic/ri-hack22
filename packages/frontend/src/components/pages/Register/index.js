@@ -25,10 +25,10 @@ const Register = ({ register, isLoading }) => {
   );
 
   const content = (
-    <>
+    <div className="login-page">
       {isLoading && <OverlayLoader />}
       <FormContainer onSubmit={handleSubmit} />
-    </>
+    </div>
   );
 
   return content;

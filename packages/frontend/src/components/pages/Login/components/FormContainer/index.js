@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, useHistory } from 'react-router-dom';
 
 import { Button, TextField } from '@material-ui/core';
+import image from 'src/images/logo.png';
 
 import { paths } from 'src/constants';
 
@@ -35,11 +36,12 @@ const FormContainer = ({ login }) => {
   };
 
   return (
-    <>
+    <div className="login-form-container">
       <form className="register-form" onSubmit={loginUser}>
+        <img src={image} alt="logo" />
         <TextField
           name="email"
-          label="Email"
+          label="E-mail"
           type="email"
           value={formValues.email}
           onChange={handleInputChange}
@@ -48,7 +50,7 @@ const FormContainer = ({ login }) => {
         />
         <TextField
           name="password"
-          label="Password"
+          label="Lozinka"
           type="password"
           value={formValues.password}
           onChange={handleInputChange}
@@ -56,16 +58,15 @@ const FormContainer = ({ login }) => {
           required
         />
         <Button variant="contained" color="primary" type="submit">
-          Submit
+          Prijava
         </Button>
       </form>
       <div>
         <span>
-          don&apos;t have an account?{' '}
-          <Link to={paths.REGISTER}>Registracija</Link>
+          Nemate račun? <Link to={paths.REGISTER}>Registrirajte se</Link>
         </span>
       </div>
-    </>
+    </div>
   );
 };
 

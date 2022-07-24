@@ -24,10 +24,10 @@ const Login = ({ login, isLoading }) => {
 
   const content = useMemo(
     () => (
-      <>
+      <div className="login-page">
         {isLoading && <OverlayLoader />}
         <FormContainer login={login} />
-      </>
+      </div>
     ),
     [isLoading, login]
   );

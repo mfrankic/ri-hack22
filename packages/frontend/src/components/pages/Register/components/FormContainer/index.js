@@ -7,6 +7,7 @@ import { Button, TextField } from '@material-ui/core';
 import { paths } from 'src/constants';
 
 import './index.scss';
+import image from 'src/images/logo.png';
 
 const initialValues = {
   name: '',
@@ -36,11 +37,12 @@ const FormContainer = ({ onSubmit }) => {
   };
 
   return (
-    <>
+    <div className="login-form-container">
       <form className="register-form" onSubmit={handleSubmit}>
+        <img src={image} alt="logo" />
         <TextField
           name="name"
-          label="Name"
+          label="Ime"
           type="text"
           value={formValues.name}
           onChange={handleInputChange}
@@ -49,7 +51,7 @@ const FormContainer = ({ onSubmit }) => {
         />
         <TextField
           name="email"
-          label="Email"
+          label="E-mail"
           type="email"
           value={formValues.email}
           onChange={handleInputChange}
@@ -58,7 +60,7 @@ const FormContainer = ({ onSubmit }) => {
         />
         <TextField
           name="password"
-          label="Password"
+          label="Lozinka"
           type="password"
           value={formValues.password}
           onChange={handleInputChange}
@@ -66,15 +68,15 @@ const FormContainer = ({ onSubmit }) => {
           required
         />
         <Button variant="contained" color="primary" type="submit">
-          Submit
+          Registracija
         </Button>
       </form>
       <div>
         <span>
-          have an account? <Link to={paths.LOGIN}>Login</Link>
+          Imate račun? <Link to={paths.LOGIN}>Prijavite se</Link>
         </span>
       </div>
-    </>
+    </div>
   );
 };
 

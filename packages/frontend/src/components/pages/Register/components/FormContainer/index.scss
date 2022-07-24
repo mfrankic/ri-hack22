@@ -1,7 +1,15 @@
 .register-form {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  align-items: center;
+  div, button {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  img {
+    margin-bottom: 15px;
+    width: 200px;
+  }
 }
 
 .registration-form-container {
