@@ -1,0 +1,105 @@
+.login-form-container__title {
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+
+  margin: 0 0 30px 0;
+}
+
+.login-form-container__line-text {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: 50px 0;
+  z-index: 2;
+}
+
+.login-form-container__line-text__text {
+  padding: 0 10px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: #fbf4ed;
+}
+
+.login-form-container__line-text__text::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 2px solid #412304;
+  z-index: -1;
+}
+
+.login-form-container__form {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.login-form-container__form__input {
+  height: 60px;
+  font-size: 25px;
+}
+
+.login-form-container__form > .btn--primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  height: 60px;
+  font-weight: 700;
+}
+
+.login-form-container__form > .icon__container {
+  margin-right: 30px;
+  height: 45px !important;
+  width: 45px !important;
+}
+
+.login-form-container__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 25px 53px;
+  font-size: 25px;
+  font-weight: 700;
+
+  height: 60px;
+
+  margin-top: 30px;
+}
+
+.login-form-container__button--forgot-password {
+  background: transparent;
+  box-shadow: none;
+  text-decoration: underline;
+
+  font-size: 25px;
+}
+
+.login-form-container__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  margin-top: 30px;
+}
+
+.login-form-container__vertical-line {
+  border-right: 3px solid #412304;
+  height: 25px;
+}
+
+.login-form-container__button {
+  background: transparent;
+  box-shadow: none;
+  text-decoration: underline;
+
+  font-size: 25px;
+
+  padding: 0 10px;
+}

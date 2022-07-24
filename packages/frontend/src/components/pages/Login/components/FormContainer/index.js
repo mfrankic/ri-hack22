@@ -7,7 +7,7 @@ import image from 'src/images/logo.png';
 
 import { paths } from 'src/constants';
 
-import './index.scss';
+import './index.css';
 
 const initialValues = {
   email: '',

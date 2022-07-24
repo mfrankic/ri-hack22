@@ -6,7 +6,7 @@ import { Button, TextField } from '@material-ui/core';
 
 import { paths } from 'src/constants';
 
-import './index.scss';
+import './index.css';
 import image from 'src/images/logo.png';
 
 const initialValues = {

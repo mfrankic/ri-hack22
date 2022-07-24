@@ -42,8 +42,9 @@ const Events = ({
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>ID</TableCell>
+                <TableCell>Slika</TableCell>
                 <TableCell>Ime</TableCell>
+                <TableCell>Opis</TableCell>
                 <TableCell>Vrijeme</TableCell>
                 <TableCell>Mjesto</TableCell>
                 <TableCell>Kreirano</TableCell>
@@ -55,8 +56,17 @@ const Events = ({
             <TableBody>
               {events.map((row) => (
                 <TableRow key={row.id}>
-                  <TableCell>{row.id}</TableCell>
+                  <TableCell>
+                    <a
+                      href={row.image_path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img height="150px" src={row.image_path} alt="Slika" />
+                    </a>
+                  </TableCell>
                   <TableCell>{row.title}</TableCell>
+                  <TableCell>{row.desc}</TableCell>
                   <TableCell>{formatDate(row.event_time)}</TableCell>
                   <TableCell>{row.location_name}</TableCell>
                   <TableCell>{formatDate(row.created_at)}</TableCell>

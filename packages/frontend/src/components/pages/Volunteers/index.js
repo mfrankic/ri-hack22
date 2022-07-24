@@ -23,7 +23,8 @@ import {
 import { actions, selectors } from 'src/store';
 import { formatDate } from 'src/utils';
 import { Page, PageLoader } from 'src/components/common';
-import './index.scss';
+
+import './index.css';
 
 const Volunteers = ({
   acceptVolunteer,

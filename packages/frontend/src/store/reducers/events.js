@@ -16,6 +16,8 @@ const actionMap = {
     data: result.data.cleansing.map((event) => ({
       id: event.id,
       title: event.title,
+      image_path: event.image_path,
+      desc: event.desc,
       event_time: event.event_time,
       location_name: event.location_name,
       created_at: event.created_at,
@@ -38,7 +40,6 @@ const actionMap = {
     isSubmitting: true,
   }),
   [actions.PATCH_EVENT_SUCCESS]: (state, { result }) => {
-    console.log(result);
     return {
       ...state,
       data: state.data.filter((event) => event.id !== result.data.event.id),

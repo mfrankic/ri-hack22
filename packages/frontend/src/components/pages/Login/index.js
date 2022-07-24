@@ -11,7 +11,7 @@ import { OverlayLoader } from 'src/components/common';
 
 import { FormContainer } from './components';
 
-import './index.scss';
+import './index.css';
 
 const Login = ({ login, isLoading }) => {
   const query = useQuery();

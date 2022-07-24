@@ -12,7 +12,7 @@ import { paths } from 'src/constants';
 
 import { FormContainer } from './components';
 
-import './index.scss';
+import './index.css';
 
 const Register = ({ register, isLoading }) => {
   const history = useHistory();

@@ -1,0 +1,36 @@
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.register-form > div {
+  margin-bottom: 8px;
+  width: 100%;
+}
+.register-form > button {
+  margin-bottom: 8px;
+  width: 100%;
+}
+.register-form > img {
+  margin-bottom: 15px;
+  width: 200px;
+}
+
+.registration-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #fbf4ed;
+}
+
+.registration-form-container > .btn--primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 10px;
+  height: 60px;
+}
