@@ -1,4 +1,4 @@
-import { actions, statusCodes } from 'src/constants';
+import { actions } from 'src/constants';
 
 const initialState = {
   data: [],
@@ -24,10 +24,7 @@ const actionMap = {
   }),
   [actions.GET_REPORTS_FAILURE]: (state, { error }) => ({
     ...state,
-    data:
-      error.response.status === statusCodes.PAYMENT_REQUIRED
-        ? { user: error.response.data.user }
-        : {},
+    data: error.response.status,
     hasLoaded: true,
   }),
 

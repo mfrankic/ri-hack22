@@ -4,6 +4,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 
 import {
+  Button,
   Table,
   TableBody,
   TableCell,
@@ -13,10 +14,22 @@ import {
   Paper,
 } from '@material-ui/core';
 
+import {
+  HighlightOff as DeclineIcon,
+  CheckCircleOutline as AcceptIcon,
+} from '@material-ui/icons';
+
 import { actions, selectors } from 'src/store';
+import { formatDate } from 'src/utils';
 import { Page, PageLoader } from 'src/components/common';
 
-const Events = ({ hasLoaded, getEvents, events }) => {
+const Events = ({
+  hasLoaded,
+  getEvents,
+  events,
+  acceptEvent,
+  declineEvent,
+}) => {
   if (!hasLoaded) {
     getEvents();
     return <PageLoader />;
@@ -35,7 +48,8 @@ const Events = ({ hasLoaded, getEvents, events }) => {
                 <TableCell>Mjesto</TableCell>
                 <TableCell>Kreirano</TableCell>
                 <TableCell>Stvoritelj</TableCell>
-                <TableCell>Objavljeno</TableCell>
+                <TableCell />
+                <TableCell />
               </TableRow>
             </TableHead>
             <TableBody>
@@ -43,11 +57,28 @@ const Events = ({ hasLoaded, getEvents, events }) => {
                 <TableRow key={row.id}>
                   <TableCell>{row.id}</TableCell>
                   <TableCell>{row.title}</TableCell>
-                  <TableCell>{row.event_time}</TableCell>
+                  <TableCell>{formatDate(row.event_time)}</TableCell>
                   <TableCell>{row.location_name}</TableCell>
-                  <TableCell>{row.created_at}</TableCell>
+                  <TableCell>{formatDate(row.created_at)}</TableCell>
                   <TableCell>{row.creator_id}</TableCell>
-                  <TableCell>{row.published}</TableCell>
+                  <TableCell>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => acceptEvent({ id: row.id })}
+                    >
+                      <AcceptIcon /> &nbsp; Prihvati
+                    </Button>
+                  </TableCell>
+                  <TableCell>
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      onClick={() => declineEvent({ id: row.id })}
+                    >
+                      <DeclineIcon /> &nbsp; Odbij
+                    </Button>
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -62,6 +93,8 @@ Events.propTypes = {
   hasLoaded: PropTypes.bool.isRequired,
   getEvents: PropTypes.func.isRequired,
   events: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  acceptEvent: PropTypes.func.isRequired,
+  declineEvent: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({

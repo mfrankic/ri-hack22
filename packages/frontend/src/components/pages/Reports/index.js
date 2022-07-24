@@ -1,9 +1,10 @@
-import React, { memo, useCallback } from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 
 import { actions, selectors } from 'src/store';
+import { formatDate } from 'src/utils';
 import { Page, PageLoader, Table } from 'src/components/common';
 
 const Reports = ({
@@ -13,11 +14,6 @@ const Reports = ({
   declineReport,
   acceptReport,
 }) => {
-  const formatDate = useCallback((date) => {
-    const newDate = new Date(date).toLocaleString('hr-HR');
-    return newDate;
-  }, []);
-
   if (!hasLoaded) {
     getReports();
     return <PageLoader />;

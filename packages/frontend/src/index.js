@@ -55,7 +55,7 @@ ReactDOM.render(
               <SafeRoute
                 exact
                 path={paths.BASE}
-                component={() => <Redirect to={paths.ROUTE_MANAGEMENT} />}
+                component={() => <Redirect to={paths.REPORTS} />}
               />
               <SafeRoute
                 exact

@@ -19,15 +19,8 @@ const actionMap = {
       event_time: event.event_time,
       location_name: event.location_name,
       created_at: event.created_at,
-      // desc: event.desc,
       creator_id: event.creator_id,
-      // grid_id: event.grid_id,
-      // image_path: event.image_path,
-      // lat: event.lat,
       published: event.published,
-      // lon: event.lon,
-      // declined: event.declined,
-      // updated_at: event.updated_at,
     })),
     hasLoaded: true,
   }),
@@ -38,6 +31,25 @@ const actionMap = {
         ? { user: error.response.data.user }
         : {},
     hasLoaded: true,
+  }),
+
+  [actions.PATCH_EVENT_REQUEST]: (state) => ({
+    ...state,
+    isSubmitting: true,
+  }),
+  [actions.PATCH_EVENT_SUCCESS]: (state, { result }) => {
+    console.log(result);
+    return {
+      ...state,
+      data: state.data.filter((event) => event.id !== result.data.event.id),
+      hasLoaded: true,
+      isSubmitting: false,
+    };
+  },
+  [actions.PATCH_EVENT_FAILURE]: (state) => ({
+    ...state,
+    hasLoaded: true,
+    isSubmitting: false,
   }),
 };
 

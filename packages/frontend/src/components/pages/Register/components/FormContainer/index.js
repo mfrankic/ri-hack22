@@ -1,6 +1,6 @@
 import React, { memo, useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { Button, TextField } from '@material-ui/core';
 
@@ -16,7 +16,6 @@ const initialValues = {
 };
 
 const FormContainer = ({ onSubmit }) => {
-  const history = useHistory();
   const [formValues, setFormValues] = useState(initialValues);
 
   const handleInputChange = useCallback(
@@ -33,7 +32,7 @@ const FormContainer = ({ onSubmit }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    onSubmit(formValues).then(() => history.push(paths.BASE));
+    onSubmit(formValues);
   };
 
   return (

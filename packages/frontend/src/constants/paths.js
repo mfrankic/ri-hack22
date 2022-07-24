@@ -17,7 +17,12 @@ export default {
     REPORT_ACCEPT: '/reports/accept',
     REPORT_DECLINE: '/reports/decline',
     VOLUNTEERS: '/user/list_volunteers',
-    EVENTS: '/cleansing',
+    EVENTS: '/cleansings',
+    EVENT_ACCEPT: '/cleansing/publish',
+    EVENT_DECLINE: '/cleansing/decline',
+    VOLUNTEER_REQUESTS: '/volunteerRequest',
+    VOLUNTEER_REQUEST_ACCEPT: '/volunteerRequest/accept',
+    VOLUNTEER_REQUEST_DECLINE: '/volunteerRequest/decline',
   },
 
   build: (path, ...params) => {
