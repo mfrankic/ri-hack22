@@ -24,32 +24,36 @@ const Events = ({ hasLoaded, getEvents, events }) => {
 
   return (
     <Page>
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              {Object.keys(events[0]).map((key) => (
-                <TableCell>{key}</TableCell>
-              ))}
-              <TableCell />
-              <TableCell />
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {events.map((row) => (
-              <TableRow key={row.id}>
-                <TableCell>{row.id}</TableCell>
-                <TableCell>{row.title}</TableCell>
-                <TableCell>{row.event_time}</TableCell>
-                <TableCell>{row.location_name}</TableCell>
-                <TableCell>{row.created_at}</TableCell>
-                <TableCell>{row.creator_id}</TableCell>
-                <TableCell>{row.published}</TableCell>
+      <div className="table-container">
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>ID</TableCell>
+                <TableCell>Ime</TableCell>
+                <TableCell>Vrijeme</TableCell>
+                <TableCell>Mjesto</TableCell>
+                <TableCell>Kreirano</TableCell>
+                <TableCell>Stvoritelj</TableCell>
+                <TableCell>Objavljeno</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {events.map((row) => (
+                <TableRow key={row.id}>
+                  <TableCell>{row.id}</TableCell>
+                  <TableCell>{row.title}</TableCell>
+                  <TableCell>{row.event_time}</TableCell>
+                  <TableCell>{row.location_name}</TableCell>
+                  <TableCell>{row.created_at}</TableCell>
+                  <TableCell>{row.creator_id}</TableCell>
+                  <TableCell>{row.published}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
     </Page>
   );
 };

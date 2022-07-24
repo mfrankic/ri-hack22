@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import { Drawer } from '..';
 
+import './index.scss';
+
 const Page = ({ children }) => {
   return (
     <div>

@@ -15,6 +15,7 @@ import {
 
 import { actions, selectors } from 'src/store';
 import { Page, PageLoader } from 'src/components/common';
+import './index.scss';
 
 const Volunteers = ({ hasLoaded, getVolunteers, volunteers }) => {
   if (!hasLoaded) {
@@ -24,32 +25,36 @@ const Volunteers = ({ hasLoaded, getVolunteers, volunteers }) => {
 
   return (
     <Page>
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              {Object.keys(volunteers[0]).map((key) => (
-                <TableCell>{key}</TableCell>
-              ))}
-              <TableCell />
-              <TableCell />
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {volunteers.map((row) => (
-              <TableRow key={row.id}>
-                <TableCell>{row.id}</TableCell>
-                <TableCell>{row.name}</TableCell>
-                <TableCell>{row.email}</TableCell>
-                <TableCell>{row.points}</TableCell>
-                <TableCell>{row.role}</TableCell>
-                <TableCell>{row.created_at}</TableCell>
-                <TableCell>{row.updated_at}</TableCell>
+      <div className="table-container">
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>ID</TableCell>
+                <TableCell>Ime</TableCell>
+                <TableCell>E-mail</TableCell>
+                <TableCell>Bodovi</TableCell>
+                <TableCell>Uloga</TableCell>
+                <TableCell>Kreirano</TableCell>
+                <TableCell>Izmijenjeno</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {volunteers.map((row) => (
+                <TableRow key={row.id}>
+                  <TableCell>{row.id}</TableCell>
+                  <TableCell>{row.name}</TableCell>
+                  <TableCell>{row.email}</TableCell>
+                  <TableCell>{row.points}</TableCell>
+                  <TableCell>{row.role}</TableCell>
+                  <TableCell>{row.created_at}</TableCell>
+                  <TableCell>{row.updated_at}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
     </Page>
   );
 };

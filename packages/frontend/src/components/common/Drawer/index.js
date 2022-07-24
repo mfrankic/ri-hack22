@@ -5,6 +5,7 @@ import { compose } from 'redux';
 import { connect, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
+import logo from 'src/images/logo.png';
 
 import { actions } from 'src/store';
 
@@ -148,9 +149,12 @@ const DrawerComponent = ({ clearUser }) => {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)}>
-        <MenuIcon />
-      </Button>
+      <div className="header">
+        <Button onClick={toggleDrawer(true)}>
+          <MenuIcon />
+        </Button>
+        <img src={logo} alt="logo" />
+      </div>
       <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
         {list()}
       </Drawer>
