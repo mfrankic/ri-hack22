@@ -35,14 +35,14 @@ const actionMap = {
     ...state,
     isSubmitting: true,
   }),
-  [actions.PATCH_REPORT_SUCCESS]: (state, { result }) => ({
-    ...state,
-    data: state.data.map((report) =>
-      report.id === result.data.report.id ? result.data.report : report
-    ),
-    hasLoaded: true,
-    isSubmitting: false,
-  }),
+  [actions.PATCH_REPORT_SUCCESS]: (state, { result }) => {
+    return {
+      ...state,
+      data: state.data.filter((report) => report.id !== result.data.report.id),
+      hasLoaded: true,
+      isSubmitting: false,
+    };
+  },
   [actions.PATCH_REPORT_FAILURE]: (state) => ({
     ...state,
     hasLoaded: true,
