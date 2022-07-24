@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Eco Rijeka</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="qrscan_fragment_label">QR Scanner</string>
+
+
+    <string name="news">Novosti</string>
+    <string name="report_problem">Prijavi problem</string>
+    <string name="organize_cleansing">Organiziraj čistku</string>
+    <string name="benefits">Eco RIjeka pogodnosti</string>
+    <string name="your_activities">Tvoje aktivnosti</string>
+    <string name="profile">Profil</string>
+    <string name="logout">Odjava</string>
+
+    <!-- Login/Register -->
+    <string name="email">Email</string>
+    <string name="password">Lozinka</string>
+    <string name="register">Registracija</string>
+    <string name="login">Prijava</string>
+
+    <!-- Prijava problema -->
+    <string name="problem_title">Naslov problema</string>
+    <string name="problem_type">Vrsta problema</string>
+    <string name="problem_type_1">Problemi sa spremnikom</string>
+    <string name="problem_type_2">Potrebna je intervencija</string>
+    <string name="problem_type_3">Ostalo</string>
+    <string name="comment">Komentar</string>
+    <string name="location">Lokacija</string>
+    <string name="location_1">Koristi trenutnu lokaciju uređaja</string>
+    <string name="location_2">Adresa:</string>
+
+    <!-- Organiziranje čistke -->
+    <string name="date_time">Datum i vrijeme</string>
+    <string name="name">Ime</string>
+    <string name="description">Opis</string>
+
+    <!-- Profil -->
+    <string name="points">Bodovi</string>
+    <string name="volonter">Postani volonter</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="event_dummy_title">RITEH cool event</string>
+    <string name="event_dummy_time">Datum, vrijeme</string>
+    <string name="event_dummy_location">Lokacija</string>
+    <string name="event_dummy_organisation">Organizator</string>
+
+    <string name="qr_code">qr_code</string>
+    <string name="volunteer_yes">Registriran si kao volonter.\n Hvala ti što doprinosiš zajednici organizirajući čistke i čineći dobro!</string>
+    <string name="volunteer_no">Žeiš li se pridružiti zajednici\nvolontera Eco Rijeke?\nMoći ćeš samostalno organizirati zelene čistke, još više doprinijeti zajednici i zaraditi još više EcoRI bodova!</string>
+    <string name="volunteer_pending">Tvoj zahtjev za volonterstvom je u obradi!</string>
+
+    <string name="onboarding_title_one">Eco Rijeka\nAplikacija za građane</string>
+    <string name="onboarding_title_two">Pogodnosti za najaktivnije</string>
+    <string name="onboarding_title_three">Bolja budućnost za sve</string>
+    <string name="onboarding_desc_one">Uz pomoć Eco Rijeka aplikacije građani mogu doprinijeti svojoj zajednici i utjecati na količinu otpada u svom gradu.</string>
+    <string name="onboarding_desc_two">Možete prijavljivati probleme s otpadom u svojoj okolici i time skupljati EcoRI bodove. EcoRI bodovi su super za povoljniju šetnju muzejom i druge aktivnosti u gradu. Ako organizirate ili sudjelujete na čistki dobivate još više bodova!</string>
+    <string name="onboarding_desc_three">Eco Rijeka želi ostvariti dobru promjenu u društvu, a to možemo samo uz tvoju pomoć!</string>
+</resources>

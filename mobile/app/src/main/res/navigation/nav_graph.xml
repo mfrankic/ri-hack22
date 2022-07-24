@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_news">
+
+    <fragment
+        android:id="@+id/qr_scanner_nav"
+        android:name="com.example.rihack.QRScanFragment"
+        android:label="@string/qrscan_fragment_label"
+        tools:layout="@layout/fragment_q_r_scan">
+        <action
+            android:id="@+id/action_QRScanner_to_NavProfile"
+            app:destination="@id/nav_profile" >
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_news"
+        android:name="com.example.rihack.NewsFragment"
+        android:label="@string/news"
+        tools:layout="@layout/fragment_news" >
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/nav_report_problem"
+        android:name="com.example.rihack.ReportProblemFragment"
+        android:label="@string/report_problem"
+        tools:layout="@layout/fragment_report_problem">
+        <action
+            android:id="@+id/action_ReportProblem_to_NavNews"
+            app:destination="@id/nav_news" >
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_organize_cleansing"
+        android:name="com.example.rihack.OrganizeCleansingFragment"
+        android:label="@string/organize_cleansing"
+        tools:layout="@layout/fragment_organize_cleansing">
+        <action
+            android:id="@+id/action_OrganizeCleansingFragment_to_NavNews"
+            app:destination="@id/nav_news" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_your_activities"
+        android:name="com.example.rihack.YourActivitiesFragment"
+        android:label="@string/your_activities"
+        tools:layout="@layout/fragment_your_activities">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_benefits"
+        android:name="com.example.rihack.BenefitsFragment"
+        android:label="Pogodnosti"
+        tools:layout="@layout/fragment_benefits" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.rihack.ProfileFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_ProfileFragment_to_qr_scanner_nav"
+            app:destination="@id/qr_scanner_nav" >
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_auth"
+        android:name="com.example.rihack.AuthFragment"
+        tools:layout="@layout/fragment_auth">
+
+        <action
+            android:id="@+id/action_AuthFragment_to_NavLogin"
+            app:destination="@id/nav_login" >
+        </action>
+        <action
+            android:id="@+id/action_AuthFragment_to_NavRegister"
+            app:destination="@id/nav_register" >
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.rihack.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_RegisterFragment_to_NavNews"
+            app:destination="@id/nav_news" >
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_register"
+        android:name="com.example.rihack.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_LoginFragment_to_NavNews"
+            app:destination="@id/nav_news" >
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_events"
+        android:name="com.example.rihack.EventsFragment"
+        android:label="Trenutni događaji"
+        tools:layout="@layout/fragment_events">
+    </fragment>
+</navigation>

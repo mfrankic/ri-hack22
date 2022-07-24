@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_news"
+            android:title="@string/news"
+            android:icon="@drawable/ic_icon_news"/>
+        <item
+            android:id="@+id/nav_report_problem"
+            android:title="@string/report_problem"
+            android:icon="@drawable/ic_icon_problem"/>
+        <item
+                android:id="@+id/nav_organize_cleansing"
+            android:title="@string/organize_cleansing"
+            android:icon="@drawable/ic_icon_trash"/>
+        <item
+            android:id="@+id/nav_benefits"
+            android:title="@string/benefits"
+            android:icon="@drawable/ic_icon_star"/>
+        <item
+            android:id="@+id/nav_events"
+            android:title="Trenutni događaji"
+            android:icon="@drawable/ic_icon_event"/>
+        <item
+            android:id="@+id/nav_your_activities"
+            android:title="@string/your_activities"
+            android:icon="@drawable/ic_icon_clock"/>
+        <item
+            android:id="@+id/nav_profile"
+            android:title="@string/profile"
+            android:icon="@drawable/ic_icon_user"/>
+    </group>
+</menu>
