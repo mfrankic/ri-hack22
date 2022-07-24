@@ -6,11 +6,13 @@ import { actions } from 'src/constants';
 import authentication from './authentication';
 import reports from './reports';
 import volunteers from './volunteers';
+import events from './events';
 
 const staticReducers = {
   authentication,
   reports,
   volunteers,
+  events,
 };
 
 const rootReducer = (asyncReducers) => {

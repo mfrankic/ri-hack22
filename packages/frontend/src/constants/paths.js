@@ -17,6 +17,7 @@ export default {
     REPORT_ACCEPT: '/reports/accept',
     REPORT_DECLINE: '/reports/decline',
     VOLUNTEERS: '/user/list_volunteers',
+    EVENTS: '/cleansing',
   },
 
   build: (path, ...params) => {
