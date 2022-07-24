@@ -20,7 +20,6 @@ import {
 } from '@material-ui/core';
 
 import {
-  AccessTime as ClockIcon,
   Delete as DeleteIcon,
   DynamicFeed as FeedIcon,
   ExitToApp as LogoutIcon,
@@ -123,22 +122,6 @@ const DrawerComponent = ({ clearUser }) => {
                     <StarIcon />
                   </ListItemIcon>
                   <ListItemText primary="Volunteers" />
-                </Button>
-              </Link>
-            </ListItem>
-
-            <Divider />
-
-            <ListItem className="list-item" key="benefits" disablePadding>
-              <Link
-                to={paths.BENEFITS}
-                style={{ textDecoration: 'none', width: '100%' }}
-              >
-                <Button style={{ width: '100%' }}>
-                  <ListItemIcon>
-                    <ClockIcon />
-                  </ListItemIcon>
-                  <ListItemText primary="Benefits" />
                 </Button>
               </Link>
             </ListItem>
