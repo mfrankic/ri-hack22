@@ -19,7 +19,7 @@ export default {
         actions.PATCH_REPORT_SUCCESS,
         actions.PATCH_REPORT_FAILURE,
       ],
-      promise: (client) => client.patch(paths.api.REPORT_ACCEPT, data),
+      promise: (client) => client.put(paths.api.REPORT_ACCEPT, data),
     },
   }),
 
@@ -30,7 +30,7 @@ export default {
         actions.PATCH_REPORT_SUCCESS,
         actions.PATCH_REPORT_FAILURE,
       ],
-      promise: (client) => client.patch(paths.api.REPORT_DECLINE, data),
+      promise: (client) => client.put(paths.api.REPORT_DECLINE, data),
     },
   }),
 };

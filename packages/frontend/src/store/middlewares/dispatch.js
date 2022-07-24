@@ -35,7 +35,7 @@ export default () => ({ dispatch, getState }) => (next) => (action) => {
         !(request.action === REQUEST && request.token === action.token)
     );
 
-  if (activeRequest) {
+  if (activeRequest?.source) {
     activeRequest.source.cancel(CANCEL_MESSAGE);
 
     activeRequests = getStillActiveRequests();
